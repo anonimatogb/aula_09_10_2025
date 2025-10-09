@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Usuário</title>
+    <title>Cadastrar Produto</title>
 </head>
 <body>            
     <form method="post">
@@ -11,7 +11,7 @@
         <input type="text" name="nome" required><br>
 
          <label for="descricao">Descrição:</label>
-        <input type="text" name="descricao" required><br>
+        <input type="textarea" name="descricao" required><br>
 
          <label for="quantidade">Quantidade:</label>
         <input type="number" name="quantidade" required><br>

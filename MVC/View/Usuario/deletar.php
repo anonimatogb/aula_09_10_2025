@@ -9,7 +9,7 @@ $UsuarioController = new UsuarioController($pdo);
 if(isset($_GET['id'])){
 
   $id = $_GET['id'];
-  $usuario = $UsuarioController->deletar($id);
+  $produto = $UsuarioController->deletar($id);
   header("location: ../../index.php");}
   else{
 header("location: ../../index.php");

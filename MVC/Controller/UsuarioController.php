@@ -9,16 +9,16 @@ class UsuarioController {
     }
 
     public function listar() {
-        $usuarios = $this->usuarioModel->buscarTodos();
+        $produtos = $this->usuarioModel->buscarTodos();
         include_once "C:/Turma1/xampp/htdocs/aula_18_09_2025/MVC/View/Usuario/listar.php";
-        return $usuarios;
+        return $produtos;
     }
      public function buscarUsuario($id) {
-        $usuario = $this->usuarioModel->buscarUsuario($id);
-        return $usuario;
+        $produto = $this->usuarioModel->buscarUsuario($id);
+        return $produto;
     }
  
-    public function cadastrar($nome,$descricao,$quantidade,$codigobarra,$preco){
+    public function cadastrar($nome, $descricao, $quantidade, $codigobarra, $preco){
 return $this-> usuarioModel->cadastrar($nome,$descricao,$quantidade,$codigobarra,$preco);
 
 
@@ -31,8 +31,8 @@ return $this-> usuarioModel->cadastrar($nome,$descricao,$quantidade,$codigobarra
 
 
      public function deletar($id){
- $usuario = $this-> usuarioModel->deletar($id);
-return $usuario;
+ $produto = $this-> usuarioModel->deletar($id);
+return $produto;
 
     }
 }
