@@ -7,11 +7,11 @@ class UsuarioModel {
     }
 
     public function buscarTodos(): array {
-        $stmt = $this->pdo->query('SELECT * FROM produtos');
+        $stmt = $this->pdo->query('SELECT * FROM usuarios');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function buscarUsuario($id): array {
-        $stmt = $this->pdo->query("SELECT * FROM produtos WHERE id = $id");
+        $stmt = $this->pdo->query("SELECT * FROM usuarios WHERE id = $id");
         return $stmt->fetch  (PDO::FETCH_ASSOC);
     }
 
@@ -21,7 +21,7 @@ class UsuarioModel {
 
 
     public function cadastrar($nome,$descricao,$quantidade,$codigobarra,$preco){
-$sql = "INSERT INTO produtos (nome, descricao, quantidade, codigobarra, preco) VALUES (:nome, :descricao, :quantidade, :codigobarra, :preco)";
+$sql = "INSERT INTO usuarios (nome, descricao, quantidade, codigobarra, preco) VALUES (:nome, :descricao, :quantidade, :codigobarra, :preco)";
 $stmt = $this->pdo->prepare($sql);
 return $stmt->execute([
     ':nome' => $nome,
@@ -36,7 +36,7 @@ return $stmt->execute([
 
 
    public function editar($nome,$descricao,$quantidade,$codigobarra,$preco,$id){
-$sql = "UPDATE produtos SET nome=?, descricao=?, quantidade=? codigobarra=? preco=? WHERE id=?";
+$sql = "UPDATE usuarios SET nome=?, descricao=?, quantidade=?, codigobarra=?, preco=? WHERE id=?";
 $stmt = $this->pdo->prepare($sql);
 return $stmt->execute([$nome,$nome,$descricao,$quantidade,$codigobarra,$preco,$id]);
 
@@ -46,7 +46,7 @@ return $stmt->execute([$nome,$nome,$descricao,$quantidade,$codigobarra,$preco,$i
 
 
     public function deletar($id){
-$sql = "DELETE FROM produtos WHERE id = ?";
+$sql = "DELETE FROM usuarios WHERE id = ?";
 $stmt = $this->pdo->prepare($sql);
 return $stmt->execute([
    $id

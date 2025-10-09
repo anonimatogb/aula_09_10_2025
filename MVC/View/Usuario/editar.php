@@ -8,7 +8,7 @@ $UsuarioController = new UsuarioController($pdo);
 if(isset($_GET['id'])){
 
   $id = $_GET['id'];
-  $produto = $UsuarioController->buscarUsuario($id);
+  $usuario = $UsuarioController->buscarUsuario($id);
 
  
 
@@ -28,19 +28,19 @@ if(isset($_GET['id'])){
       
 
 <label for="nome">Nome:</label>
-        <input type="text" name="nome" value="<?=$produto['nome'];?>" required><br>
+        <input type="text" name="nome" value="<?=$usuario['nome'];?>" required><br>
 
          <label for="descricao">Descrição:</label>
-        <input type="text" name="descricao" value="<?=$produto['descricao'];?>" required><br>
+        <input type="text" name="descricao" value="<?=$usuario['descricao'];?>" required><br>
 
          <label for="quantidade">Quantidade:</label>
-        <input type="number" name="quantidade" value="<?=$produto['quantidade'];?>" required><br>
+        <input type="number" name="quantidade" value="<?=$usuario['quantidade'];?>" required><br>
 
         <label for="codigobarra">Código de Barras:</label>
-        <input type="text" name="codigobarra" value="<?=$produto['codigobarra'];?>" required><br>
+        <input type="text" name="codigobarra" value="<?=$usuario['codigobarra'];?>" required><br>
 
         <label for="preco">Preço:</label>
-        <input type="text" name="preco" value="<?=$produto['preco'];?>" required><br>
+        <input type="text" name="preco" value="<?=$usuario['preco'];?>" required><br>
 
 
   <input type="submit">
