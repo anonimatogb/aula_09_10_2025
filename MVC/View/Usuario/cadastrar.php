@@ -11,7 +11,7 @@
         <input type="text" name="nome" required><br>
 
          <label for="descricao">Descrição:</label>
-        <input type="textarea" name="descricao" required><br>
+        <input type="text" name="descricao" required><br>
 
          <label for="quantidade">Quantidade:</label>
         <input type="number" name="quantidade" required><br>
