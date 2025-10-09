@@ -59,7 +59,7 @@ if(isset($_GET['id'])){
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   $nome = $_POST['nome'];
-  $email = $_POST['descricao'];
+  $descricao = $_POST['descricao'];
   $quantidade = $_POST['quantidade'];
   $codigobarra = $_POST['codigobarra'];
   $preco = $_POST['preco'];

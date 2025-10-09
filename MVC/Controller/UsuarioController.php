@@ -10,7 +10,7 @@ class UsuarioController {
 
     public function listar() {
         $usuarios = $this->usuarioModel->buscarTodos();
-        include_once "C:/Turma1/xampp/htdocs/aula_18_09_2025/MVC/View/Usuario/listar.php";
+        include_once "C:/Turma1/xampp/htdocs/aula_09_10_2025/MVC/View/Usuario/listar.php";
         return $usuarios;
     }
      public function buscarUsuario($id) {

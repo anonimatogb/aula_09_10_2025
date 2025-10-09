@@ -37,7 +37,7 @@ $UsuarioController = new UsuarioController($pdo);
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   $nome = $_POST['nome'];
-  $decricao = $_POST['descricao'];
+  $descricao = $_POST['descricao'];
   $quantidade = $_POST['quantidade'];
   $codigobarra = $_POST['codigobarra'];
   $preco = $_POST['preco'];
