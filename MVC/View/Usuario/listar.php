@@ -48,9 +48,9 @@ echo"<br><br><br><br>";
 
 
     echo "<table border='1' cellpadding='5' cellspacing='0'>";
-    echo"<tr><td><a href='View/Usuario/cadastrar.php'>Cadastrar</a></td></tr>";
+    echo"<tr><td>Formas de Pagamento</td><td><a href='View/Usuario/cadastrar.php'>Cadastrar</a></td></tr>";
     echo "<tr>
-        <th>ID</th>
+        <th>  </th>
         <th>Nome</th>
         <th>Descrição</th>
         <th>Quantidade</th>
