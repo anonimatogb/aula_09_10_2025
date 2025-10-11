@@ -1,8 +1,8 @@
 <?php
 
 
-require_once "C:/Turma1/xampp/htdocs/aula_09_10_2025/MVC/Controller/UsuarioController.php";
-require_once "C:/Turma1/xampp/htdocs/aula_09_10_2025/MVC/DB/DataBase.php";
+require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/Controller/UsuarioController.php";
+require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/DB/DataBase.php";
 
 $UsuarioController = new UsuarioController($pdo);
 
@@ -15,9 +15,6 @@ if(isset($_GET['id'])){
 header("location: ../../index.php");
  
   }
-
- 
-
 
 
 ?>

@@ -22,6 +22,25 @@
         <label for="preco">Preço:</label>
         <input type="text" name="preco" required><br>
 
+        <br><br>
+      <label for="nomepaga">Nome Pagamento:</label>
+      <select name="nomepaga" value="<?= $usuario['nomepaga']; ?>" required><br>
+        <option value="mastercard">Cartao MasterCard</option>
+        <option value="visa">Cartao Visa</option>
+        <option value="pix">PIX</option>
+        <option value="dinheiro">Dinheiro</option>
+      </select>
+      <br><br>
+
+      <label for="tipo">Tipo Pagamento:</label>
+      <select name="tipo" value="<?= $usuario['tipo']; ?>" required><br>
+        <option value="credito">CRÉDITO</option>
+        <option value="debito">DÉBITO</option>
+        <option value="pix">PIX</option>
+        <option value="vista">À vista</option>
+      </select><br><br>
+
+
         <input type="submit">
     </form>
 </body>
@@ -29,8 +48,8 @@
 
 <?php
 
-require_once "C:/Turma1/xampp/htdocs/aula_09_10_2025/MVC/Controller/UsuarioController.php";
-require_once "C:/Turma1/xampp/htdocs/aula_09_10_2025/MVC/DB/DataBase.php";
+require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/Controller/UsuarioController.php";
+require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/DB/DataBase.php";
 
 $UsuarioController = new UsuarioController($pdo);
 
@@ -41,11 +60,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $quantidade = $_POST['quantidade'];
   $codigobarra = $_POST['codigobarra'];
   $preco = $_POST['preco'];
+  $nomepaga = $_POST['nomepaga'];
+  $tipo = $_POST['tipo'];
 
 
-  $UsuarioController -> cadastrar( $nome, $descricao, $quantidade, $codigobarra, $preco);
+  $UsuarioController -> cadastrar( $nome, $descricao, $quantidade, $codigobarra, $preco,$nomepaga,$tipo);
   header("Location: ../../index.php");
 }
-  
+ 
+
 
 ?>

@@ -20,8 +20,8 @@ class UsuarioModel {
 
 
 
-    public function cadastrar($nome,$descricao,$quantidade,$codigobarra,$preco){
-$sql = "INSERT INTO produtos (nome, descricao, quantidade, codigobarra, preco) VALUES (:nome, :descricao, :quantidade, :codigobarra, :preco)";
+    public function cadastrar($nome,$descricao,$quantidade,$codigobarra,$preco,$nomepaga,$tipo){
+$sql = "INSERT INTO produtos (nome, descricao, quantidade, codigobarra, preco,nomepaga,tipo) VALUES (:nome, :descricao, :quantidade, :codigobarra, :preco,:nomepaga,:tipo)";
 $stmt = $this->pdo->prepare($sql);
      $stmt->execute([
     ':nome' => $nome,
@@ -29,16 +29,18 @@ $stmt = $this->pdo->prepare($sql);
       ':quantidade' => $quantidade,
       ':codigobarra' => $codigobarra,
       ':preco' => $preco,
+      ':nomepaga' => $nomepaga,
+      ':tipo' => $tipo
 ]);
 
 
     }
 
 
-   public function editar($nome,$descricao,$quantidade,$codigobarra,$preco,$id){
-$sql = "UPDATE produtos SET nome=?, descricao=?, quantidade=?, codigobarra=?, preco=? WHERE id=?";
+   public function editar($nome,$descricao,$quantidade,$codigobarra,$preco,$nomepaga,$tipo,$id){
+$sql = "UPDATE produtos SET nome=?, descricao=?, quantidade=?, codigobarra=?, preco=?, nomepaga=?, tipo=? WHERE id=?";
 $stmt = $this->pdo->prepare($sql);
-return $stmt->execute([$nome,$descricao,$quantidade,$codigobarra,$preco,$id]);
+return $stmt->execute([$nome,$descricao,$quantidade,$codigobarra,$preco,$nomepaga,$tipo,$id]);
 
 
     }
