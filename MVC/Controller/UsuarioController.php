@@ -1,5 +1,5 @@
 <?php
-require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/Model/UsuarioModel.php";
+require_once "C:/turma1/xampp/htdocs/aula_09_10_2025/MVC/Model/UsuarioModel.php";
 
 class UsuarioController {
     private $usuarioModel;
@@ -10,7 +10,7 @@ class UsuarioController {
 
     public function listar() {
         $usuarios = $this->usuarioModel->buscarTodos();
-        include_once "C:/xampp/htdocs/aula_09_10_2025/MVC/View/Usuario/listar.php";
+        include_once "C:/turma1/xampp/htdocs/aula_09_10_2025/MVC/View/Usuario/listar.php";
         return $usuarios;
     }
      public function buscarUsuario($id) {

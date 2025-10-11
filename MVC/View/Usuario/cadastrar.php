@@ -6,6 +6,7 @@
     <title>Cadastrar Produto</title>
 </head>
 <body>            
+  
     <form method="post">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" required><br>
@@ -48,8 +49,8 @@
 
 <?php
 
-require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/Controller/UsuarioController.php";
-require_once "C:/xampp/htdocs/aula_09_10_2025/MVC/DB/DataBase.php";
+require_once "C:/turma1/xampp/htdocs/aula_09_10_2025/MVC/Controller/UsuarioController.php";
+require_once "C:/turma1/xampp/htdocs/aula_09_10_2025/MVC/DB/DataBase.php";
 
 $UsuarioController = new UsuarioController($pdo);
 
