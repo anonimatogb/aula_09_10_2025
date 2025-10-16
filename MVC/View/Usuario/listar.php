@@ -1,7 +1,7 @@
 <?php
 
     if (empty($usuarios)) {
-      echo "<p>Nenhum usuário encontrado!</p>";
+      echo "<p>Nenhum produto encontrado!</p>";
        echo"<a href='View/Usuario/cadastrar.php'>Cadastrar</a>";
       return;
     }
@@ -33,7 +33,7 @@ foreach ($usuarios as $usuario) {
       echo "<td>{$usuario['tipo']}</td>";
       echo "<td>
 <a href='View/Usuario/editar.php?id={$id}'>Editar</a> 
-<a href='View/Usuario/deletar.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir este usuário?')\">Deletar</a></td>";
+<a href='View/Usuario/deletar.php?id={$id}' onclick=\"return confirm('Tem certeza que deseja excluir este produto?')\">Deletar</a></td>";
       echo "</tr>";
     }
 
